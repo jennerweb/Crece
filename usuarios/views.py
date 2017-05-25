@@ -39,7 +39,7 @@ def guardarUsuario(request):
 
         usuario = Usuarios.objects.get(id=u.id)
         asunto = "SUMALE VALOR A TU EXPERIENCIA"
-        body = render_to_string('correo.html', { 'user': usuario})
+        body = render_to_string('correo.html', { 'usuario': usuario })
         msg = EmailMultiAlternatives(asunto, body, EMAIL_HOST_USER, [ usuario.correo ] )
         msg.content_subtype = "html"
         msg.send()
@@ -53,7 +53,7 @@ def Experiencia(request, id):
         url = URL
         usuario = Usuarios.objects.get(id=id)
         profesion = Profesiones.objects.get(id=usuario.profesion_id)
-        return render(request, "experiencia.html", {'usuario': usuario , 'profesion': profesion , 'url': url })
+        return render(request, "experiencia.html", { 'usuario': usuario , 'profesion': profesion , 'url': url })
     except Usuarios.DoesNotExist:
         return HttpResponseRedirect('/')
 
