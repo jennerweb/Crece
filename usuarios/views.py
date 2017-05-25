@@ -57,7 +57,12 @@ def Experiencia(request, id):
     except Usuarios.DoesNotExist:
         return HttpResponseRedirect('/')
 
-import Image, io, base64
+try:
+    from PIL import Image
+except:
+    import Image
+
+import io, base64
 def certificadoPNG(request):
     if request.method == 'POST':
         id = request.POST['codigo_usuario']
