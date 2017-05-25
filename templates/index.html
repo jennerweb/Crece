@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SÚMALE VALOR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="static/css/estile.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+          <h1>SÚMALE VALOR<br>
+          A TU <span>EXPERIENCIA</span><h1>
+          <h2>CONOCE CUÁNTAS HORAS DE EXPERIENCIA LABORAL HAS ACUMULADO EN EL TIEMPO.</h2>
+          <h3>INGRESA TUS DATOS:</h3>
+        </div>
+      </div>
+    </div>
+  </header>
+<section>
+  <div class="container">
+    <div  class= "row">
+      <div class="col-xs-12 col-sm-9 col-lg-6">
+        <form class="formulario" action="{% url 'usuarios:guardarUsuario' %}" method="POST"> {% csrf_token %}
+          <div  class= "row">
+            <div class="col-xs-12 col-sm-8 col-lg-8">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nombres y apellidos</label>
+                <input class="form-control" type="text" name="nombres" required>
+              </div>
+            </div>
+          <div class="col-xs-12 col-sm-4 col-lg-4">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Edad</label>
+              <input class="form-control" type="text" name="edad" onKeyPress="return soloNumeros(event)" maxlength="2" required>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-lg-8">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Correo electrónico</label>
+              <input class="form-control" type="email" name="correo" required>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-lg-4">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Años de experiencia</label>
+              <input class="form-control" type="text" name="experiencia" onKeyPress="return soloNumeros(event)" maxlength="2"  required>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-lg-12">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Campo laboral</label>
+              <select class="form-control" name="profesion" required>
+                <option value="">-- Selecciona un Campo --</option>
+                {% for profesion in profesiones %}
+                <option value="{{ profesion.id }}">{{ profesion.profesion }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+              <div class="form-check">
+              <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" checked>
+              Politicas de Privacidad
+              </label>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+              <div class="form-group">
+              <button type="submit" class="btn btn-success btn-block">CALCULAR</button>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+              <div class="form-group">
+                <button type="reset" class="btn btn-success btn-block">LIMPIAR</button>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+              <small id="fileHelp" class="form-text text-muted">* Todos los campos son requeridos.</small>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script>
+	var bgColorArray = ['/static/img/bg.jpg','/static/img/bg02.jpg'],
+  selectBG = bgColorArray[Math.floor(Math.random() * bgColorArray.length)];
+  $('body').css('background-image', 'url(' + selectBG + ')')
+
+  function soloNumeros(e){
+  	var key = window.Event ? e.which : e.keyCode
+  	return (key >= 48 && key <= 57)
+  }
+
+</script>
+</body>
+</html>

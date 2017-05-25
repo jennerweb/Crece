@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="https://crece.herokuapp.com/experiencia/{{ usuario.id }}" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title"  content="Horas de Experiencia {{ usuario.experiencia_horas }}" />
+    <meta property="og:description" content="{{ usuario.nombres }} tiene {{ usuario.experiencia_horas }} de experiencia como {{ usuario.profesion }}.   !Conoce Cuantas Tienes!" />
+    <meta property="og:image" content="{{ url }}{{ usuario.certificado }}"/>
+    <meta property="fb:app_id" content="448294685535231"/>
+    <title>SÚMALE VALOR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="/static/css/estile.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <script src="/static/js-remax/html2canvas.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<section class="expe">
+  <div id="html-content-holder" class="container">
+    <body background="{{ url }}{{ profesion.foto }}">
+      <div  class= "row justify-content-center" >
+          <div class="col-xs-12 col-sm-10 col-lg-10">
+            <div class="experiencia">
+              <div class="row">
+                <div class="col-xs-1 col-md-2"></div>
+                <div class="col-xs-10 col-md-8">
+                  <h3>{{ usuario.nombres }}</h3>
+                  <h4>Tienes:</h4>
+                  <h1 id="experiencia"></h1>
+                  <h2>DE EXPERIENCIA</h2>
+                </div>
+                <div class="col-xs-1 col-md-2"></div>
+              </div>
+              <div class="row">
+                <div class="col-xs-1 col-md-2"></div>
+                <div class="col-xs-10 col-md-8"><a id="btn_init" class="btn btn-danger">COMPÁRTELO</a></div>
+                <div class="col-xs-1 col-md-2"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </body>
+      <form class="formulario" id="formularioExperiencia" action="{% url 'usuarios:certificadoPNG' %}" method="POST"> {% csrf_token %}
+        <div id="previewImage" style="display: none"></div>
+        <input type="text" id="codigo_usuario" name="codigo_usuario" style="display: none" value="{{ usuario.id }}"></div>
+        <input type="text" id="imgB64" name="imgB64" style="display: none"></div>
+      </form>
+  </div>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script>
+
+$(document).ready(function(){
+
+  // CONVIERTE EL STRING DE HORAS A DECIMALES
+  var string = numeral({{ usuario.experiencia_horas }}).format('0,0');
+  $('#experiencia').text(string+" hrs.")
+
+  var element = $("#html-content-holder");
+  var getCanvas;
+
+  // CONVIERTE EL HTML A PNG
+  html2canvas(element, {
+  onrendered: function (canvas) {
+        $("#previewImage").append(canvas);
+        getCanvas = canvas;
+        var id = "{{ usuario.id }}";
+        var certificado = getCanvas.toDataURL("image/png");
+        $("#imgB64").val(certificado)
+        if ( "{{ usuario.certificado }}" == "" ){
+          document.getElementById('formularioExperiencia').submit()
+        }
+     }
+  });
+});
+
+window.onload=function() {
+ FB.init({
+   appId      : '448294685535231',
+   xfbml      : true,
+   version    : 'v2.8'
+ });
+};
+
+ (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/es_LA/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+   $(document).ready(function(){
+       $('#btn_init').click(function(){
+           FB.getLoginStatus(function(response) {
+             if (response.status === 'connected') {
+                 console.log('Ya has iniciado sesión');
+                 postStory();
+             }
+             else {
+               FB.login(function(response) {
+                 if (response.status === 'connected') {
+                    console.log('Sesión iniciada');
+                    postStory();
+                 } else if (response.status === 'not_authorized') {
+                    console.log('Acceso no autorizado');
+                 } else {
+                    console.log('No ha iniciado sesión con esta App');
+                 }
+               },{scope: 'public_profile,email,user_friends'});
+             }
+           });
+        });
+       $('#btn_out').click(function(){
+           FB.logout(function(response) {
+             console.log('Sesión Cerrada');
+           });
+        });
+   });
+
+   function postStory(){
+       FB.ui({
+         method: 'share',
+         mobile_iframe: true,
+         href: "https://crece.herokuapp.com/experiencia/{{ usuario.id }}",
+         app_id: '448294685535231',
+       }, function(response){
+           if(response && !response.error_message){
+             console.log('link posteado'+response.post_id);
+           }
+           else{
+             console.log('error ...');
+           }
+       });
+   }
+
+</script>
+</html>
