@@ -36,10 +36,10 @@ def guardarUsuario(request):
         u.save()
 
         os.makedirs("media/usuarios/"+str(u.id))
-
+        url = URL
         usuario = Usuarios.objects.get(id=u.id)
         asunto = "SUMALE VALOR A TU EXPERIENCIA"
-        body = render_to_string('correo.html', { 'usuario': usuario })
+        body = render_to_string('correo.html', { 'usuario': usuario , 'url': url })
         msg = EmailMultiAlternatives(asunto, body, EMAIL_HOST_USER, [ usuario.correo ] )
         msg.content_subtype = "html"
         msg.send()

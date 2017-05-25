@@ -15,7 +15,7 @@
                                     <table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
-                                                <td border="0"><img src="/static/img/crece.jpg" alt="crece" title="crece" border="0"></td>
+                                                <td border="0"><img src="{{ url }}static/img/crece.jpg" alt="crece" title="crece" border="0"></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -42,7 +42,7 @@
                                                     <tbody>
                                                         <tr>
                                                             <td style="font-family:open sans,helvetica neue,helvetica,arial,sans-serif; font-size: 16px;  color: #444444; padding: 40px 0px 40px 0px;">
-                                                                <p>Estimado(a)<strong>{{ usuario.nombres }},</strong> durante tu trabajo, has acumulado:</p>
+                                                                <p>Estimado(a)&nbsp;&nbsp;<strong>{{ usuario.nombres }},</strong> durante tu trabajo, has acumulado:</p>
                                                                 <h1 style="color:#162c9b; font-weight:200; font-size:38px; ">{{ usuario.experiencia_horas }} Hrs.</h1>
                                                                 <h3 style="color:#162c9b;  line-height:4px; font-size:25px;">DE EXPERIENCIA LABORAL</h3>
                                                                 <p>Qué podrás acreditar si te animas a estudiar Ingeniería Industrial con nosotros.</p>
@@ -98,9 +98,8 @@
                                                         <td>
                                                             <table width="540" border="0" cellspacing="0" cellpadding="0" style="padding: 35px 0px 35px 0px; border-bottom:1pt solid black; border-top:1pt solid black;">
                                                                 <tr>
-
-                                                                    <td width="293" valign="middle"><img src="/static/img/uss.png"></td>
-                                                                    <td width="292" align="right"><img src="/static/img/crecelog.png"></td>
+                                                                    <td width="293" valign="middle"><img src="{{ url }}static/img/uss.png"></td>
+                                                                    <td width="292" align="right"><img src="{{ url }}static/img/crecelog.png"></td>
                                                                 </tr>
                                                             </table>
                                                         </td>
