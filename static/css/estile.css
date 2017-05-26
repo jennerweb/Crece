@@ -124,7 +124,7 @@ select.form-control:not([size]):not([multiple]) {
 .experiencia {
     background-color: rgba(55, 220, 148, 0.85);
     box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.59);
-    background-image: url('../img/certi.png');
+
     background-position: top right;
     background-repeat: no-repeat;
     border-radius: 5px;
