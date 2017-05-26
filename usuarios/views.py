@@ -34,8 +34,10 @@ def guardarUsuario(request):
         u.experiencia_horas = int(request.POST['experiencia']) * 8760
         u.profesion_id = request.POST['profesion']
         u.save()
-
-        os.makedirs("media/usuarios/"+str(u.id))
+        try:
+            os.makedirs("media/usuarios/"+str(u.id))
+        except:
+            print(e)
         url = URL
         usuario = Usuarios.objects.get(id=u.id)
         asunto = "SUMALE VALOR A TU EXPERIENCIA"
