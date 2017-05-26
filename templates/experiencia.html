@@ -21,7 +21,7 @@
   <div id="html-content-holder" class="container">
     <body background="{{ url }}media/{{ profesion.foto }}">
       <div  class= "row justify-content-center" >
-          <div class="col-xs-12 col-sm-10 col-lg-10">
+          <div class="col-xs-12 col-sm-10 col-lg-12">
             <div class="experiencia">
               <div class="row">
                 <div class="col-xs-1 col-md-2"></div>
@@ -124,7 +124,8 @@ window.onload=function() {
        FB.ui({
          method: 'share',
          mobile_iframe: true,
-         href: "{{ url }}experiencia/{{ usuario.id }}",
+         href: "https://creceperu.com.pe",
+         //href: "{{ url }}experiencia/{{ usuario.id }}",
          app_id: '448294685535231',
        }, function(response){
            if(response && !response.error_message){

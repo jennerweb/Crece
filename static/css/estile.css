@@ -1,1 +1,278 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i";body{background-position:center center;background-repeat:no-repeat;background-attachment:fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;color:#fff;background-color:#003399;font-family:'Open Sans', sans-serif}header{padding-top:84px;padding-bottom:20px}header h1{font-size:65px;font-weight:800;line-height:60px;padding-bottom:5px}header h1 span{color:#37DC94}header h2{font-size:16px;font-weight:800;color:#CCCCCC}header h3{font-size:16px;font-weight:600;color:#CCCCCC}.formulario label{font-size:12px;font-weight:700;color:#CCCCCC}.formulario small{font-size:12px;font-weight:500;color:#CCCCCC}.text-muted{color:#CCCCCC !important}.form-control{display:block;width:100%;padding:.85rem .85rem;font-size:0.8rem;line-height:1.25;letter-spacing:0.5px;font-weight:700;color:#003399;background-color:rgba(55, 220, 148, 0.5);background-image:none;-webkit-background-clip:padding-box;background-clip:padding-box;border:0px solid rgba(0, 0, 0, .15);border-radius:.35rem;-webkit-transition:background-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;transition:background-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;-o-transition:background-color ease-in-out .15s, box-shadow ease-in-out .15s;transition:background-color ease-in-out .15s, box-shadow ease-in-out .15s;transition:background-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s}select.form-control:not([size]):not([multiple]){height:calc(2.45rem + 4px)}.form-control::-webkit-input-placeholder{color:#003399}.form-control:-moz-placeholder{color:#003399}.form-control::-moz-placeholder{color:#003399}.form-control:-ms-input-placeholder{color:#003399}.form-control:focus{background-color:rgba(55, 220, 148, 1)}.form-group{margin-bottom:0.3rem}.btn-success{background-color:rgba(55, 220, 148, 0.5);border:0px;border-radius:.35rem;font-size:20px;font-weight:700;color:#37DC94;padding-top:13px;padding-bottom:13px;letter-spacing:1px}.btn-success:hover{background-color:rgba(55, 220, 148, 1);border:0px;font-weight:700;color:#003399}.btn-success a:hover{background-color:rgba(55, 220, 148, 1);border:0px;font-weight:700}.expe{padding-top:84px;padding-bottom:84px}.experiencia{background-color:rgba(55, 220, 148, 0.85);box-shadow:30px 30px 20px 0px rgba(0, 0, 0, 0.59);background-image:url('../img/fondo.png');background-position:top right;background-repeat:no-repeat;border-radius:5px;padding-top:104px;padding-bottom:104px}.experiencia h3{color:#003399;font-size:35px;font-weight:700}.experiencia h4{color:#FFFFFF;font-size:35px;font-weight:300;padding-top:10px}.experiencia h1{color:#FFFFFF;font-size:87px;font-weight:800}.experiencia h2{color:#003399;font-size:63px;font-weight:800;padding-bottom:35px}.btn-danger{background-color:#FF5126;border:0px;border-radius:.35rem;font-size:28px;font-weight:700;color:#37DC94;padding-top:13px;padding-bottom:13px;letter-spacing:1px;padding-left:70px;padding-right:70px;cursor:pointer}.btn-danger:hover{background-color:#003399;border:0px;font-weight:700;color:#FF5126}.btn-danger a:hover{background-color:#003399;border:0px;font-weight:700}@media (min-width: 300px) and (max-width: 767px){body{background-position:top center;background-repeat:no-repeat;background-attachment:fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;color:#fff;background-color:#003399;font-family:'Open Sans', sans-serif}header h1{font-size:55px;font-weight:800;line-height:60px;padding-bottom:5px}.experiencia{background-color:rgba(55, 220, 148, 0.85);box-shadow:0px 4px 14px 0px rgba(0, 0, 0, 0.20);background-image:url('../img/certi.png');background-position:top right;background-repeat:no-repeat;border-radius:5px;padding-left:38px;padding-right:50px;padding-top:104px;padding-bottom:65px;background-size:50%}.experiencia h3{color:#003399;font-size:30px;font-weight:700}.experiencia h4{color:#FFFFFF;font-size:25px;font-weight:300;padding-top:10px}.experiencia h1{color:#FFFFFF;font-size:45px;font-weight:800}.experiencia h2{color:#003399;font-size:30px;font-weight:800;padding-bottom:25px}.btn-danger{background-color:#FF5126;border:0px;border-radius:.35rem;font-size:24px;font-weight:700;color:#37DC94;padding-top:13px;margin-bottom:20px;padding-left:40px;padding-right:40px;letter-spacing:1px}}@media (min-width: 769px) and (max-width: 991px){.experiencia{background-color:rgba(55, 220, 148, 0.85);box-shadow:0px 4px 14px 0px rgba(0, 0, 0, 0.20);background-image:url('../img/certi.png');background-position:top right;background-repeat:no-repeat;border-radius:5px;padding-left:58px;padding-right:50px;padding-top:104px;padding-bottom:104px}.experiencia h3{color:#003399;font-size:30px;font-weight:700}.experiencia h4{color:#FFFFFF;font-size:30px;font-weight:300;padding-top:10px}.experiencia h1{color:#FFFFFF;font-size:60px;font-weight:800}.experiencia h2{color:#003399;font-size:45px;font-weight:800;padding-bottom:35px}}
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i";
+body {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    background-color: #003399;
+    font-family: 'Open Sans', sans-serif
+}
+header {
+    padding-top: 84px;
+    padding-bottom: 20px
+}
+header h1 {
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 60px;
+    padding-bottom: 5px
+}
+header h1 span {
+    color: #37DC94
+}
+header h2 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #CCCCCC
+}
+header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #CCCCCC
+}
+.formulario label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #CCCCCC
+}
+.formulario small {
+    font-size: 12px;
+    font-weight: 500;
+    color: #CCCCCC
+}
+.text-muted {
+    color: #CCCCCC !important
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .85rem .85rem;
+    font-size: 0.8rem;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: #003399;
+    background-color: rgba(55, 220, 148, 0.5);
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 0px solid rgba(0, 0, 0, .15);
+    border-radius: .35rem;
+    -webkit-transition: background-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: background-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: background-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: background-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: background-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.45rem + 4px)
+}
+.form-control::-webkit-input-placeholder {
+    color: #003399
+}
+.form-control:-moz-placeholder {
+    color: #003399
+}
+.form-control::-moz-placeholder {
+    color: #003399
+}
+.form-control:-ms-input-placeholder {
+    color: #003399
+}
+.form-control:focus {
+    background-color: rgba(55, 220, 148, 1)
+}
+.form-group {
+    margin-bottom: 0.3rem
+}
+.btn-success {
+    background-color: rgba(55, 220, 148, 0.5);
+    border: 0px;
+    border-radius: .35rem;
+    font-size: 20px;
+    font-weight: 700;
+    color: #37DC94;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    letter-spacing: 1px
+}
+.btn-success:hover {
+    background-color: rgba(55, 220, 148, 1);
+    border: 0px;
+    font-weight: 700;
+    color: #003399
+}
+.btn-success a:hover {
+    background-color: rgba(55, 220, 148, 1);
+    border: 0px;
+    font-weight: 700
+}
+.expe {
+    padding-top: 84px;
+    padding-bottom: 84px
+}
+.experiencia {
+    background-color: rgba(55, 220, 148, 0.85);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.59);
+    background-image: url('../img/certi.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    padding-top: 104px;
+    padding-bottom: 104px
+}
+.experiencia h3 {
+    color: #003399;
+    font-size: 35px;
+    font-weight: 700
+}
+.experiencia h4 {
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: 300;
+    padding-top: 10px
+}
+.experiencia h1 {
+    color: #FFFFFF;
+    font-size: 87px;
+    font-weight: 800
+}
+.experiencia h2 {
+    color: #003399;
+    font-size: 63px;
+    font-weight: 800;
+    padding-bottom: 35px
+}
+.btn-danger {
+    background-color: #FF5126;
+    border: 0px;
+    border-radius: .35rem;
+    font-size: 28px;
+    font-weight: 700;
+    color: #37DC94;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    letter-spacing: 1px;
+    padding-left: 70px;
+    padding-right: 70px;
+    cursor: pointer
+}
+.btn-danger:hover {
+    background-color: #003399;
+    border: 0px;
+    font-weight: 700;
+    color: #FF5126
+}
+.btn-danger a:hover {
+    background-color: #003399;
+    border: 0px;
+    font-weight: 700
+}
+@media (min-width: 300px) and (max-width: 767px) {
+    body {
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: #fff;
+        background-color: #003399;
+        font-family: 'Open Sans', sans-serif
+    }
+    header h1 {
+        font-size: 55px;
+        font-weight: 800;
+        line-height: 60px;
+        padding-bottom: 5px
+    }
+    .experiencia {
+        background-color: rgba(55, 220, 148, 0.85);
+        box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
+        background-image: url('../img/certi.png');
+        background-position: top right;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        padding-left: 38px;
+        padding-right: 50px;
+        padding-top: 104px;
+        padding-bottom: 65px;
+        background-size: 50%
+    }
+    .experiencia h3 {
+        color: #003399;
+        font-size: 30px;
+        font-weight: 700
+    }
+    .experiencia h4 {
+        color: #FFFFFF;
+        font-size: 25px;
+        font-weight: 300;
+        padding-top: 10px
+    }
+    .experiencia h1 {
+        color: #FFFFFF;
+        font-size: 45px;
+        font-weight: 800
+    }
+    .experiencia h2 {
+        color: #003399;
+        font-size: 30px;
+        font-weight: 800;
+        padding-bottom: 25px
+    }
+    .btn-danger {
+        background-color: #FF5126;
+        border: 0px;
+        border-radius: .35rem;
+        font-size: 24px;
+        font-weight: 700;
+        color: #37DC94;
+        padding-top: 13px;
+        margin-bottom: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        letter-spacing: 1px
+    }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+    .experiencia {
+        background-color: rgba(55, 220, 148, 0.85);
+        box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
+        background-image: url('../img/certi.png');
+        background-position: top right;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        padding-left: 58px;
+        padding-right: 50px;
+        padding-top: 104px;
+        padding-bottom: 104px
+    }
+    .experiencia h3 {
+        color: #003399;
+        font-size: 30px;
+        font-weight: 700
+    }
+    .experiencia h4 {
+        color: #FFFFFF;
+        font-size: 30px;
+        font-weight: 300;
+        padding-top: 10px
+    }
+    .experiencia h1 {
+        color: #FFFFFF;
+        font-size: 60px;
+        font-weight: 800
+    }
+    .experiencia h2 {
+        color: #003399;
+        font-size: 45px;
+        font-weight: 800;
+        padding-bottom: 35px
+    }
+}
