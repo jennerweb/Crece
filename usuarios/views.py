@@ -36,7 +36,7 @@ def guardarUsuario(request):
         u.save()
         try:
             os.makedirs("media/usuarios/"+str(u.id))
-        except:
+        except exception as e:
             print(e)
         url = URL
         usuario = Usuarios.objects.get(id=u.id)
