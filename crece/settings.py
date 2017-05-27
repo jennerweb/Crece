@@ -51,10 +51,10 @@ MESSAGE_LEVEL = message_constants.DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd79knnq5hgvt4',
-        'USER': 'btpipfnhwapuva',
-        'PASSWORD': '43a1b3a8421d532893b50b256a12cf4461e751676f361356fe879dc6a8cfa34f',
-        'HOST': 'ec2-174-129-224-33.compute-1.amazonaws.com',
+        'NAME': 'd7unp1qpqhgcr8',
+        'USER': 'dncoolzpfaclvj',
+        'PASSWORD': '9a19cceb555a28b342d667858f79b033cb26cb27d24c6a434764489807ed3eee',
+        'HOST': 'ec2-23-21-169-238.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
