@@ -86,12 +86,19 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-URL = "http://creceperu.com.pe/"
+URL = "https://creceperu.com.pe/"
 #URL = "http://localhost:8000/"
 STATIC_URL = '/static/'
 STATICFILES_DIRS= [BASE_DIR+ '/static/']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR+ '/media/'
+
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SEaCURE_HSTS_INCLUDE_SUBDOMAINS = True
+
 
 """
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
