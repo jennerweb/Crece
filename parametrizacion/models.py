@@ -8,7 +8,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 def profesiones_directory_path(profesion, id):
-    return "profesiones/"'{0}'.format(str(profesion)+".png")
+    return "profesiones/"'{0}'.format(profesion)
 
 class Profesiones(models.Model):
     profesion = models.CharField(max_length=50, null=False, blank=False)
