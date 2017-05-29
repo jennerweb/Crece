@@ -27,12 +27,12 @@ header h1 span {
 header h2 {
     font-size: 16px;
     font-weight: 800;
-    color: #CCCCCC
+    color: #FFFFFF
 }
 header h3 {
     font-size: 16px;
     font-weight: 600;
-    color: #CCCCCC
+    color: #FFFFFF
 }
 
 #brand{
@@ -43,7 +43,7 @@ header h3 {
 .formulario label {
     font-size: 12px;
     font-weight: 700;
-    color: #CCCCCC
+    color: #FFFFFF
 }
 .formulario small {
     font-size: 12px;
@@ -62,7 +62,7 @@ header h3 {
     letter-spacing: 0.5px;
     font-weight: 700;
     color: #2B1B8C;
-    background-color: rgba(63, 187, 17, 0.6);
+    background-color: rgba(63, 187, 17, 0.8);
     background-image: none;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
@@ -96,7 +96,7 @@ select.form-control:not([size]):not([multiple]) {
     margin-bottom: 0.3rem
 }
 .btn-success {
-    background-color: rgba(63, 187, 17, 0.3);
+    background-color: rgba(43, 27, 140, 0.8);
     border: 0px;
     border-radius: .35rem;
     font-size: 20px;

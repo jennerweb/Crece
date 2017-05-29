@@ -3,4 +3,4 @@ from usuarios.models import *
 
 @admin.register(Usuarios)
 class UsuariosAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('nombres', 'edad')
