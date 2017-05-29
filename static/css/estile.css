@@ -8,7 +8,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     color: #fff;
-    background-color: #2B1B8C;
+    background-color: #003399;
     font-family: 'Open Sans', sans-serif
 }
 header {
@@ -22,17 +22,17 @@ header h1 {
     padding-bottom: 5px
 }
 header h1 span {
-    color: #3FBB11
+    color: #37DC94
 }
 header h2 {
     font-size: 16px;
     font-weight: 800;
-    color: #FFFFFF
+    color: #CCCCCC
 }
 header h3 {
     font-size: 16px;
     font-weight: 600;
-    color: #FFFFFF
+    color: #CCCCCC
 }
 
 #brand{
@@ -43,7 +43,7 @@ header h3 {
 .formulario label {
     font-size: 12px;
     font-weight: 700;
-    color: #FFFFFF
+    color: #CCCCCC
 }
 .formulario small {
     font-size: 12px;
@@ -61,8 +61,8 @@ header h3 {
     line-height: 1.25;
     letter-spacing: 0.5px;
     font-weight: 700;
-    color: #2B1B8C;
-    background-color: rgba(63, 187, 17, 0.8);
+    color: #003399;
+    background-color: rgba(55, 220, 148, 0.5);
     background-image: none;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
@@ -78,25 +78,25 @@ select.form-control:not([size]):not([multiple]) {
     height: calc(2.45rem + 4px)
 }
 .form-control::-webkit-input-placeholder {
-    color: #2B1B8C
+    color: #003399
 }
 .form-control:-moz-placeholder {
-    color: #2B1B8C
+    color: #003399
 }
 .form-control::-moz-placeholder {
-    color: #2B1B8C
+    color: #003399
 }
 .form-control:-ms-input-placeholder {
-    color: #2B1B8C
+    color: #003399
 }
 .form-control:focus {
-    background-color: rgba(63, 187, 17, 1)
+    background-color: rgba(55, 220, 148, 1)
 }
 .form-group {
     margin-bottom: 0.3rem
 }
 .btn-success {
-    background-color: rgba(43, 27, 140, 0.8);
+    background-color: rgba(55, 220, 148, 0.5);
     border: 0px;
     border-radius: .35rem;
     font-size: 20px;
@@ -107,13 +107,13 @@ select.form-control:not([size]):not([multiple]) {
     letter-spacing: 1px
 }
 .btn-success:hover {
-    background-color: rgba(63, 187, 17, 1);
+    background-color: rgba(55, 220, 148, 1);
     border: 0px;
     font-weight: 700;
     color: #2B1B8C
 }
 .btn-success a:hover {
-    background-color: rgba(63, 187, 17, 1);
+    background-color: rgba(55, 220, 148, 1);
     border: 0px;
     font-weight: 700
 }
@@ -122,8 +122,8 @@ select.form-control:not([size]):not([multiple]) {
     padding-bottom: 84px
 }
 .experiencia {
-    background-color: rgba(63, 187, 17, 0.85);
-    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.59);
+    background-color: rgba(55, 220, 148, 0.85);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
     background-position: top right;
     background-repeat: no-repeat;
     border-radius: 5px;
@@ -131,7 +131,7 @@ select.form-control:not([size]):not([multiple]) {
     padding-bottom: 104px
 }
 .experiencia h3 {
-    color: #2B1B8C;
+    color: #003399;
     font-size: 35px;
     font-weight: 700
 }
@@ -147,7 +147,7 @@ select.form-control:not([size]):not([multiple]) {
     font-weight: 800
 }
 .experiencia h2 {
-    color: #2B1B8C;
+    color: #003399;
     font-size: 63px;
     font-weight: 800;
     padding-bottom: 35px
@@ -167,13 +167,13 @@ select.form-control:not([size]):not([multiple]) {
     cursor: pointer
 }
 .btn-danger:hover {
-    background-color: #2B1B8C;
+    background-color: #003399;
     border: 0px;
     font-weight: 700;
     color: #FF5126
 }
 .btn-danger a:hover {
-    background-color: #2B1B8C;
+    background-color: #003399;
     border: 0px;
     font-weight: 700
 }
@@ -187,7 +187,7 @@ select.form-control:not([size]):not([multiple]) {
         -o-background-size: cover;
         background-size: cover;
         color: #fff;
-        background-color: #2B1B8C;
+        background-color: #003399;
         font-family: 'Open Sans', sans-serif
     }
     header h1 {
@@ -197,7 +197,7 @@ select.form-control:not([size]):not([multiple]) {
         padding-bottom: 5px
     }
     .experiencia {
-        background-color: rgba(63, 187, 17, 0.85);
+        background-color: rgba(55, 220, 148, 0.85);
         box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
         /*background-image: url('../img/certi.png');*/
         background-position: top right;
@@ -210,7 +210,7 @@ select.form-control:not([size]):not([multiple]) {
         background-size: 50%
     }
     .experiencia h3 {
-        color: #2B1B8C;
+        color: #003399;
         font-size: 30px;
         font-weight: 700
     }
@@ -226,7 +226,7 @@ select.form-control:not([size]):not([multiple]) {
         font-weight: 800
     }
     .experiencia h2 {
-        color: #2B1B8C;
+        color: #003399;
         font-size: 30px;
         font-weight: 800;
         padding-bottom: 25px
@@ -247,7 +247,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 @media (min-width: 769px) and (max-width: 991px) {
     .experiencia {
-        background-color: rgba(63, 187, 17, 0.85);
+        background-color: rgba(55, 220, 148, 0.85);
         box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
         background-image: url('../img/certi.png');
         background-position: top right;
@@ -259,7 +259,7 @@ select.form-control:not([size]):not([multiple]) {
         padding-bottom: 104px
     }
     .experiencia h3 {
-        color: #2B1B8C;
+        color: #003399;
         font-size: 30px;
         font-weight: 700
     }
@@ -275,7 +275,7 @@ select.form-control:not([size]):not([multiple]) {
         font-weight: 800
     }
     .experiencia h2 {
-        color: #2B1B8C;
+        color: #003399;
         font-size: 45px;
         font-weight: 800;
         padding-bottom: 35px
