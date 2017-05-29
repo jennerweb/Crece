@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:url" content="{{ url }}experiencia/{{ usuario.id }}" />
+    <meta property="og:url" content="{{ url }}" />
+    <!--<meta property="og:url" content="{{ url }}experiencia/{{ usuario.id }}" />-->
     <meta property="og:type" content="article"/>
     <meta property="og:title"  content="Horas de Experiencia {{ usuario.experiencia_horas }}" />
     <meta property="og:description" content="{{ usuario.nombres }} tiene {{ usuario.experiencia_horas }} de experiencia en {{ usuario.profesion }}.   !Conoce Cuantas Tienes!" />
@@ -19,7 +20,7 @@
 </head>
 <section class="expe">
   <div id="html-content-holder" class="container">
-    <body  style="background-image: url('{{ url }}media/{{ profesion.foto }}');">
+    <body background="http://creceperu.com.pe/static/img/expebg.jpg">
     <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -32,12 +33,12 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
       <div  class= "row justify-content-center" >
-          <div class="col-xs-12 col-sm-10 col-lg-10">
-            <div class="experiencia">
+          <div class="col-xs-12 col-sm-10 col-lg-12">
+            <div class="experiencia" style="background-image: url('{{ url }}media/{{ profesion.foto }}');">
               
                 <div class="row">
-                  <div class="col-xs-1 col-md-2"></div>
-                  <div class="col-xs-10 col-md-8">
+                  <div class="col-xs-1 col-md-1"></div>
+                  <div class="col-xs-10 col-md-9">
                     <h3>{{ usuario.nombres }}</h3>
                     <h4>Tienes:</h4>
                     <h1 id="experiencia"></h1>
@@ -46,8 +47,8 @@
                   <div class="col-xs-1 col-md-2"></div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-1 col-md-2"></div>
-                  <div class="col-xs-10 col-md-8"><a id="btn_init" class="btn btn-danger">COMPÁRTELO</a></div>
+                  <div class="col-xs-1 col-md-1"></div>
+                  <div class="col-xs-10 col-md-9"><a id="btn_init" class="btn btn-danger">COMPÁRTELO</a></div>
                   <div class="col-xs-1 col-md-2"></div>
                 </div>
               
