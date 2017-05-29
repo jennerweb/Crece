@@ -128,7 +128,8 @@ select.form-control:not([size]):not([multiple]) {
     background-repeat: no-repeat;
     border-radius: 5px;
     padding-top: 104px;
-    padding-bottom: 104px
+    padding-bottom: 104px;
+    background-size: 100%
 }
 .experiencia h3 {
     color: #003399;
@@ -207,7 +208,7 @@ select.form-control:not([size]):not([multiple]) {
         padding-right: 50px;
         padding-top: 104px;
         padding-bottom: 65px;
-        background-size: 50%
+        background-size: 225%
     }
     .experiencia h3 {
         color: #003399;
@@ -256,7 +257,8 @@ select.form-control:not([size]):not([multiple]) {
         padding-left: 58px;
         padding-right: 50px;
         padding-top: 104px;
-        padding-bottom: 104px
+        padding-bottom: 104px; 
+    background-size: 220%
     }
     .experiencia h3 {
         color: #003399;
@@ -281,3 +283,19 @@ select.form-control:not([size]):not([multiple]) {
         padding-bottom: 35px
     }
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .experiencia {
+        background-color: rgba(55, 220, 148, 0.85);
+        box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.20);
+        background-image: url('../img/certi.png');
+        background-position: top right;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        padding-left: 58px;
+        padding-right: 50px;
+        padding-top: 104px;
+        padding-bottom: 104px; 
+    background-size: 116%
+    }
+    }
