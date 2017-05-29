@@ -127,8 +127,8 @@ select.form-control:not([size]):not([multiple]) {
     background-position: top right;
     background-repeat: no-repeat;
     border-radius: 5px;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 85px;
+    padding-bottom: 75px;
     background-size: 100%
 }
 .experiencia h3 {
