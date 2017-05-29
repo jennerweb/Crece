@@ -31,7 +31,7 @@ def guardarUsuario(request):
         u.edad = request.POST['edad']
         u.correo = request.POST['correo']
         u.experiencia_anos = request.POST['experiencia']
-        u.experiencia_horas = int(request.POST['experiencia']) * 8760
+        u.experiencia_horas = int(request.POST['experiencia']) * 2304
         u.profesion_id = request.POST['profesion']
         u.save()
         try:
