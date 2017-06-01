@@ -33,6 +33,8 @@ def guardarUsuario(request):
         u.experiencia_anos = request.POST['experiencia']
         u.experiencia_horas = int(request.POST['experiencia']) * 2304
         u.profesion_id = request.POST['profesion']
+        u.grado_id = request.POST['grado']
+        u.ciudad_id = request.POST['ciudad']
         u.save()
         try:
             os.makedirs("media/usuarios/"+str(u.id))
