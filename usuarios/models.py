@@ -16,7 +16,7 @@ class Usuarios(models.Model):
     experiencia_horas = models.CharField(max_length=8, null=False, blank=False)
     profesion = models.ForeignKey(Profesiones, null=True ,blank=False)
     certificado = models.TextField(null=False, blank=True)
-    grado = models.CharField(max_length=50, null=False, blank=False)
+    instruccion = models.CharField(max_length=50, null=False, blank=False)
     ciudad = models.CharField(max_length=50, null=False, blank=False)
 
     def __str__(self):
